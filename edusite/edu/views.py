@@ -258,8 +258,7 @@ class ProductStatisticsList(generics.ListAPIView):
                                             round(cast(count(e.id) as real)/
                                                   cast((select 
                                                             count(*) 
-                                                        from users_user u 
-                                                        where u.status is false) 
+                                                        from users_user u) 
                                                   as real) * 100, 2) as acquisition
                                         from 
                                             edu_product p
